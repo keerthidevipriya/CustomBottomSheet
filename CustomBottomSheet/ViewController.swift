@@ -25,6 +25,7 @@ class ViewController: BottomSheetController {
         let btn = UIButton()
         btn.titleLabel?.textColor = .black
         btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.addTarget(self, action: #selector(btnTapped), for: .touchUpInside)
         return btn
     }()
     
@@ -32,6 +33,7 @@ class ViewController: BottomSheetController {
         let btn = UIButton()
         btn.titleLabel?.textColor = .black
         btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         return btn
     }()
     
@@ -39,6 +41,7 @@ class ViewController: BottomSheetController {
         let btn = UIButton()
         btn.titleLabel?.textColor = .black
         btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         return btn
     }()
     
@@ -46,6 +49,7 @@ class ViewController: BottomSheetController {
         let btn = UIButton()
         btn.titleLabel?.textColor = .black
         btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         return btn
     }()
     
@@ -53,6 +57,7 @@ class ViewController: BottomSheetController {
         let btn = UIButton()
         btn.titleLabel?.textColor = .black
         btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         return btn
     }()
 
@@ -64,7 +69,9 @@ class ViewController: BottomSheetController {
     }
 
     func configure() {
-        self.view.backgroundColor = .red
+        //fitBtn.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+
+        self.containerView.backgroundColor = .clear
         fitBtn.setTitle("Fit", for: .normal)
         smallBtn.setTitle("Small", for: .normal)
         mediumBtn.setTitle("Medium", for: .normal)
@@ -89,7 +96,6 @@ class ViewController: BottomSheetController {
             //containerView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
             fitBtn.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
 
-            fitBtn.topAnchor.constraint(equalTo: containerView.topAnchor),
             smallBtn.topAnchor.constraint(equalTo: fitBtn.bottomAnchor, constant: Constant.margin),
             mediumBtn.topAnchor.constraint(equalTo: smallBtn.bottomAnchor, constant: Constant.margin),
             largeBtn.topAnchor.constraint(equalTo: mediumBtn.bottomAnchor, constant: Constant.margin),
@@ -100,6 +106,15 @@ class ViewController: BottomSheetController {
             largeBtn.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
             fillBtn.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
         ])
+    }
+}
+
+extension ViewController {
+    @objc func btnTapped() {
+        print("btn taped--")
+    }
+    @objc func buttonAction() {
+        print("btn taped---")
     }
 }
 
