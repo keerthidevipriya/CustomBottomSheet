@@ -246,7 +246,6 @@ final class BottomSheetInteractiveDismissalTransition: NSObject {
 
         func cancel() {
             // Cancels any active animators (`.stopAnimation(false)`
-            // and leave the animated properties at current value (`finishAnimation(at: .current)`).
             heightAnimator?.stopAnimation(false)
             heightAnimator?.finishAnimation(at: .current)
             offsetAnimator?.stopAnimation(false)
@@ -340,7 +339,7 @@ final class BottomSheetInteractiveDismissalTransition: NSObject {
                 // or if it should be canceled (and the animation reversed).
                 let continueDismissal = interactiveDismissal && // Needs to be interactive dismissal.
                 (
-                    velocity.y > dismissalVelocityThreshold || // Gesture velocity is more than the threshold.
+                    velocity.y > dismissalVelocityThreshold ||
                     fractionComplete > 0.5 && velocity.y > -dismissalVelocityThreshold // The sheet is 50% off screen and the gesture velocity is greater than the negative threshold.
                 )
 

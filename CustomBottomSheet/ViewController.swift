@@ -14,8 +14,9 @@ class ViewController: BottomSheetController {
     }
     
     lazy var containerView: UIView = {
-       let view = UIView()
+        let view = UIView()
         view.backgroundColor = .gray
+        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
@@ -23,30 +24,35 @@ class ViewController: BottomSheetController {
     lazy var fitBtn: UIButton = {
         let btn = UIButton()
         btn.titleLabel?.textColor = .black
+        btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
     
     lazy var smallBtn: UIButton = {
         let btn = UIButton()
         btn.titleLabel?.textColor = .black
+        btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
     
     lazy var mediumBtn: UIButton = {
         let btn = UIButton()
         btn.titleLabel?.textColor = .black
+        btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
     
     lazy var largeBtn: UIButton = {
         let btn = UIButton()
         btn.titleLabel?.textColor = .black
+        btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
     
     lazy var fillBtn: UIButton = {
         let btn = UIButton()
         btn.titleLabel?.textColor = .black
+        btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
 
@@ -58,6 +64,7 @@ class ViewController: BottomSheetController {
     }
 
     func configure() {
+        self.containerView.backgroundColor = .red
         fitBtn.setTitle("Fit", for: .normal)
         smallBtn.setTitle("Small", for: .normal)
         mediumBtn.setTitle("Medium", for: .normal)
@@ -80,12 +87,18 @@ class ViewController: BottomSheetController {
             containerView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
             //containerView.rightAnchor.constraint(equalTo: self.view.rightAnchor),
             //containerView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
-            
+            fitBtn.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
+
             fitBtn.topAnchor.constraint(equalTo: containerView.topAnchor),
             smallBtn.topAnchor.constraint(equalTo: fitBtn.bottomAnchor, constant: Constant.margin),
             mediumBtn.topAnchor.constraint(equalTo: smallBtn.bottomAnchor, constant: Constant.margin),
             largeBtn.topAnchor.constraint(equalTo: mediumBtn.bottomAnchor, constant: Constant.margin),
-            fillBtn.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
+            fillBtn.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
+            
+            smallBtn.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
+            mediumBtn.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
+            largeBtn.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
+            fillBtn.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
         ])
     }
 }
