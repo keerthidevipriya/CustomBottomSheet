@@ -64,7 +64,7 @@ class ViewController: BottomSheetController {
     }
 
     func configure() {
-        self.containerView.backgroundColor = .red
+        self.view.backgroundColor = .red
         fitBtn.setTitle("Fit", for: .normal)
         smallBtn.setTitle("Small", for: .normal)
         mediumBtn.setTitle("Medium", for: .normal)
