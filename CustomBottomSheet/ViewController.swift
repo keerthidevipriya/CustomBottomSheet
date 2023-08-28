@@ -69,8 +69,6 @@ class ViewController: BottomSheetController {
     }
 
     func configure() {
-        //fitBtn.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-
         self.containerView.backgroundColor = .clear
         fitBtn.setTitle("Fit", for: .normal)
         smallBtn.setTitle("Small", for: .normal)
@@ -92,19 +90,19 @@ class ViewController: BottomSheetController {
         NSLayoutConstraint.activate([
             containerView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             containerView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
-            //containerView.rightAnchor.constraint(equalTo: self.view.rightAnchor),
-            //containerView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+
             fitBtn.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
 
             smallBtn.topAnchor.constraint(equalTo: fitBtn.bottomAnchor, constant: Constant.margin),
             mediumBtn.topAnchor.constraint(equalTo: smallBtn.bottomAnchor, constant: Constant.margin),
             largeBtn.topAnchor.constraint(equalTo: mediumBtn.bottomAnchor, constant: Constant.margin),
-            fillBtn.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
+            fillBtn.topAnchor.constraint(equalTo: largeBtn.bottomAnchor, constant: Constant.margin),
             
             smallBtn.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
             mediumBtn.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
             largeBtn.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
-            fillBtn.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
+            fillBtn.centerXAnchor.constraint(equalTo: containerView.centerXAnchor)
+
         ])
     }
 }
