@@ -15,6 +15,7 @@
 		562C48ED2A9BDB0A00AEA6C1 /* CustomBottomSheetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562C48EC2A9BDB0A00AEA6C1 /* CustomBottomSheetTests.swift */; };
 		562C48F72A9BDB0A00AEA6C1 /* CustomBottomSheetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562C48F62A9BDB0A00AEA6C1 /* CustomBottomSheetUITests.swift */; };
 		562C48F92A9BDB0A00AEA6C1 /* CustomBottomSheetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562C48F82A9BDB0A00AEA6C1 /* CustomBottomSheetUITestsLaunchTests.swift */; };
+		56BBBD1D2A9DA5CC00D49C2B /* MyBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BBBD1C2A9DA5CC00D49C2B /* MyBottomSheet.swift */; };
 		56FC95352A9C7C44005F3A4D /* BottomSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FC95342A9C7C44005F3A4D /* BottomSheetController.swift */; };
 		56FC95372A9C7CA4005F3A4D /* BottomSheetTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FC95362A9C7CA4005F3A4D /* BottomSheetTransitioningDelegate.swift */; };
 		56FC95392A9C7D17005F3A4D /* BottomSheetPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FC95382A9C7D17005F3A4D /* BottomSheetPresentationController.swift */; };
@@ -51,6 +52,7 @@
 		562C48F22A9BDB0A00AEA6C1 /* CustomBottomSheetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomBottomSheetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		562C48F62A9BDB0A00AEA6C1 /* CustomBottomSheetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBottomSheetUITests.swift; sourceTree = "<group>"; };
 		562C48F82A9BDB0A00AEA6C1 /* CustomBottomSheetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBottomSheetUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		56BBBD1C2A9DA5CC00D49C2B /* MyBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBottomSheet.swift; sourceTree = "<group>"; };
 		56FC95342A9C7C44005F3A4D /* BottomSheetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetController.swift; sourceTree = "<group>"; };
 		56FC95362A9C7CA4005F3A4D /* BottomSheetTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetTransitioningDelegate.swift; sourceTree = "<group>"; };
 		56FC95382A9C7D17005F3A4D /* BottomSheetPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetPresentationController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				56FC95332A9C7C28005F3A4D /* CustomBottomSheet */,
 				562C48D52A9BDB0900AEA6C1 /* AppDelegate.swift */,
 				562C48D72A9BDB0900AEA6C1 /* SceneDelegate.swift */,
+				56BBBD1C2A9DA5CC00D49C2B /* MyBottomSheet.swift */,
 				562C48D92A9BDB0900AEA6C1 /* ViewController.swift */,
 				562C48DE2A9BDB0A00AEA6C1 /* Assets.xcassets */,
 				562C48E02A9BDB0A00AEA6C1 /* LaunchScreen.storyboard */,
@@ -276,6 +279,7 @@
 			files = (
 				56FC95352A9C7C44005F3A4D /* BottomSheetController.swift in Sources */,
 				562C48DA2A9BDB0900AEA6C1 /* ViewController.swift in Sources */,
+				56BBBD1D2A9DA5CC00D49C2B /* MyBottomSheet.swift in Sources */,
 				56FC95392A9C7D17005F3A4D /* BottomSheetPresentationController.swift in Sources */,
 				56FC95372A9C7CA4005F3A4D /* BottomSheetTransitioningDelegate.swift in Sources */,
 				562C48D62A9BDB0900AEA6C1 /* AppDelegate.swift in Sources */,
